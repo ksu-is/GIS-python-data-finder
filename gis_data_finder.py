@@ -1,5 +1,9 @@
-# make sure before you try to run this code, you open ArcMap
-# and load this in the python window!
 #set the map document we're working on
-mxd = arcpy.mapping.MapDocument("CURRENT")
-
+mxd = arcpy.mapping.MapDocument(r"C:\Users\almccleary\Documents\IS3020\McCleary_CrimeDensity.mxd")
+#set the dataframe and layer we're searching in
+df = arcpy.mapping.ListDataFrames(mxd, "Saint Louis")[0]   
+lyr = arcpy.mapping.ListLayers(mxd, "countycrime", df)[0]
+#select by attribute
+select_by = raw_input('enter an attribute to search for in layer: ')
+arcpy.SelectLayerByAttribute_management(lyr, "NEW_SELECTION",
+#selection is made, time to create layer from selection
