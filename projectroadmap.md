@@ -1,7 +1,7 @@
 * 1. download arcgis- just obtained license - DONE
 * 2. find census data to create geodatabase with - DONE
-* 3. create geodatabase in arcmap/catalog
-* 4. create layout in ArcMap- cannot insert layout items in arcmap with python alone
+* 3. create geodatabase in arcmap/catalog - DONE (reusing data I found in a GIS class as it was handy)
+* 4. create layout in ArcMap- cannot insert layout items in arcmap with python alone - DONE
 * 5. find relevant code in github for mapping - DONE
 * 6. apply found code to my own
 * 7. create an input function
