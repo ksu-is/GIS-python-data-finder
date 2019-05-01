@@ -6,8 +6,8 @@ df = arcpy.mapping.ListDataFrames(mxd, "Saint Louis")[0]
 lyr = arcpy.mapping.ListLayers(mxd, "countycrime", df)[0]
 
 #create feature layer (temp layer) to copy to; 1st parameter input layer, 2nd parameter output layer
-arcpy.MakeFeatureLayer_management("countycrime.shp", "Rape_lyr")
+arcpy.MakeFeatureLayer_management("C:/Users/almccleary/Documents/IS3020/McCleary_Crime.gdb/countycrime", "Rape_lyr")
 #select by attribute
-arcpy.SelectLayerByAttribute_management(lyr, "NEW_SELECTION", "UCR_CRIME_ = 111')
+arcpy.SelectLayerByAttribute_management(lyr, "NEW_SELECTION", "UCR_CRIME_ = 111")
 #selection is made, time to copy to new layer from selection
 arcpy.CopyFeatures_management("Rape_lyr", "C:/Users/almccleary/Documents/IS3020/McCleary_Crime.gdb/rape_stats")
